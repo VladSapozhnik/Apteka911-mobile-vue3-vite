@@ -1,0 +1,30 @@
+.menu {
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 15px rgba(22, 25, 31, 0.1);
+  border-radius: 60px;
+  padding: 8px 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  margin-top: auto;
+  &-item {
+    padding: 6px 0;
+    position: relative;
+    &_pic {
+      margin-right: 8px;
+    }
+  }
+  &:last-child {
+    .menu-item:before {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 100%;
+      background: #E5EAEF;
+      position: absolute;
+      right: 0%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

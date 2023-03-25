@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "img": "medicine",
+    "title": "Цитрамон-Дарниця табл. №10",
+    "prevPrice": 0,
+    "currentPrice": 1650,
+    "isStock": true
+  },
+  {
+    "id": 2,
+    "img": "medicine",
+    "title": "Цитрамон-Дарниця табл. №10",
+    "prevPrice": 8.33,
+    "currentPrice": 9.33,
+    "isStock": true
+  },
+  {
+    "id": 3,
+    "img": "medicine",
+    "title": "Цитрамон-Дарниця табл. №10",
+    "prevPrice": 0,
+    "currentPrice": 10.33,
+    "isStock": true
+  },
+  {
+    "id": 4,
+    "img": "medicine",
+    "title": "Цитрамон-Дарниця табл. №10",
+    "prevPrice": 0,
+    "currentPrice": 10.33,
+    "isStock": false
+  },
+  {
+    "id": 5,
+    "img": "medicine",
+    "title": "Цитрамон-Дарниця табл. №10",
+    "prevPrice": 9.33,
+    "currentPrice": 1650,
+    "isStock": true
+  },
+  {
+    "id": 6,
+    "img": "medicine",
+    "title": "Цитрамон-Дарниця табл. №10",
+    "prevPrice": 8.33,
+    "currentPrice": 9.33,
+    "isStock": true
+  },
+  {
+    "id": 7,
+    "img": "medicine",
+    "title": "Цитрамон-Дарниця табл. №10",
+    "prevPrice": 0,
+    "currentPrice": 10.33,
+    "isStock": true
+  },
+  {
+    "id": 8,
+    "img": "medicine",
+    "title": "Цитрамон-Дарниця табл. №10",
+    "prevPrice": 0,
+    "currentPrice": 10.33,
+    "isStock": false
+  }
+]

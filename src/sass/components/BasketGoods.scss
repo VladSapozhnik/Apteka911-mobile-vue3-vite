@@ -1,0 +1,43 @@
+.goods {
+  box-shadow: 0 4px 15px rgba(22, 25, 31, 0.1);
+  border-radius: 24px;
+  padding: 16px 24px 8px;
+  &_head {
+    padding: 16px 0 12px;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 120%;
+    border-bottom: 1px solid #E5EAEF;
+    span {
+      color: #3985C6;
+    }
+  }
+  &-item {
+    padding: 16px 0 18px;
+    &_pic {
+      border: 1px solid #E5EAEF;
+      border-radius: 8px;
+      width: 60px;
+      height: 50px;
+      margin-right: 10px;
+    }
+    &_title {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 140%;
+      margin-bottom: 8px;
+    }
+    &-price {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 120%;
+
+      &_number {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        margin-left: 24px;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+//@import '~svg-spritemap-webpack-plugin/sprites.scss';
+@import "normalize";
+@import "fonts";
+@import "config";
+//@import "mixins/clearfix";
+@import "mixins/breakpoints";
+@import "mixins/text-size";
+
+@import "grid";
+@import "base";
+@import "helpers";
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap');
+
+//components
+@import "components/Header";
+@import "components/Main";
+@import "components/CartsSlider";
+@import "components/Menu";
+@import "components/Info";
+@import "components/Popup";
+@import "components/Basket";
+@import "components/BasketGoods";
