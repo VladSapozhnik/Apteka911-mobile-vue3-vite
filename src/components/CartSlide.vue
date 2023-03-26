@@ -10,7 +10,10 @@ import {useStore} from "vuex";
   defineProps({
     cart: Object,
   })
-  const loadImg = (img) => new URL('../assets/'+img+'.png', import.meta.url).href;
+  // const loadImg = (img) => new URL('../assets/'+img+'.png', import.meta.url).href;
+
+  //IMG SRC BUILD `../static/images/${cart.img}.png`
+
   const isBasketCart = (cart) => basketCart.value.includes(cart);
   const onSubmit = (cart) => {
     emit('addCartToBasket', cart);
@@ -23,7 +26,7 @@ import {useStore} from "vuex";
 
 <template>
     <div class="cart_img object-fit">
-      <img :src="loadImg(cart.img)" alt="cart">
+      <img :src="`./src/assets/${cart.img}.png`" alt="cart">
     </div>
     <h3 class="cart_title">
       {{ cart.title }}

@@ -5,11 +5,10 @@
   const store = useStore();
   const basket = computed(() => store.getters.BASKET);
 
-  const loadImg = (img) => new URL('../assets/'+img+'.png', import.meta.url).href;
+  // const loadImg = (img) => new URL('../assets/'+img+'.png', import.meta.url).href;
 
   defineExpose({
     basket,
-    loadImg
   })
 </script>
 
@@ -19,7 +18,7 @@
       <ul class="goods-list" v-for="cart of basket" :key="cart.id">
         <li class="goods-item _f">
           <div class="goods-item_pic object-fit">
-            <img :src="loadImg(cart.img)" alt="basket goods" />
+            <img :src="`./src/assets/${cart.img}.png`" alt="basket goods" />
           </div>
           <div>
             <h4 class="goods-item_title">{{cart.title}}</h4>
