@@ -18,7 +18,7 @@
   const carts = computed(() => store.getters.CARTS_RESULT);
 
   const windowSize = ref(window.innerHeight);
-  const rowDoubleHeight = 850;
+  const rowDoubleHeight = 800;
   const rowSlides = ref( windowSize.value > rowDoubleHeight ? 2 : 1);
 
   onMounted(() => {
