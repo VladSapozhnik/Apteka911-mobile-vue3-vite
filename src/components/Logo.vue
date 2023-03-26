@@ -3,9 +3,12 @@
 </script>
 
 <template>
-  <router-link :to="{name: 'main'}" class="logo object-fit" href="/">
-    <img src="../assets/logo.svg" alt="logo"/>
-  </router-link>
+  <keep-alive>
+    <router-link :to="{name: 'main'}" class="logo object-fit" href="/">
+      <img src="../assets/logo.svg" alt="logo"/>
+    </router-link>
+  </keep-alive>
+
 </template>
 
 <style scoped>

@@ -1,24 +1,23 @@
 <script setup>
-  import {ref} from "vue";
+import {computed} from "vue";
+import {useStore} from "vuex";
 
-  const isAddToCart = ref(false);
+  const store = useStore();
+  const basketCart = computed(() => store.getters.BASKET);
 
   const emit = defineEmits(['addCartToBasket'])
 
   defineProps({
     cart: Object,
   })
-
   const loadImg = (img) => new URL('../assets/'+img+'.png', import.meta.url).href;
-
+  const isBasketCart = (cart) => basketCart.value.includes(cart);
   const onSubmit = (cart) => {
-    isAddToCart.value = !isAddToCart.value;
     emit('addCartToBasket', cart);
   }
 
   defineExpose({
     onSubmit,
-    isAddToCart,
   })
 </script>
 
@@ -34,10 +33,10 @@
         <div class="cart-price_prev" v-if="cart.prevPrice">{{ cart.prevPrice }} грн</div>
         <div class="cart-price_current" :class="{active: cart.prevPrice}">{{ cart.currentPrice }} грн</div>
       </div>
-      <div class="cart_basket" @click="onSubmit(cart)" :class="{active: !isAddToCart}"></div>
+      <div class="cart_basket" @click="onSubmit(cart)" :class="{active: isBasketCart(cart)}"></div>
     </div>
     <div class="cart_is-stock">
       <span v-if="cart.isStock">Є в наявності</span>
-      <span v-else :style="{color: '#8592AA'}">Немає в наявності</span>
+      <span v-else class="cart_is-stock--grey">Немає в наявності</span>
     </div>
 </template>

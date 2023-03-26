@@ -32,7 +32,6 @@
   background-color: #FFFFFF;
   box-shadow: 0 4px 15px rgba(22, 25, 31, 0.1);
   border-radius: 10px;
-  margin-bottom: 16px;
   box-sizing: border-box;
   padding: 10px 10px 16px;
   display: flex !important;
@@ -74,30 +73,15 @@
     }
   }
 
-  .swiper-container-multirow-column > .swiper-wrapper {
-
-    //flex-direction: inherit;
-  }
-
-  //.swiper-wrapper {
-  //  background-color: #FF1D1D !important;
-  //  /* flex-wrap: wrap; */
-  //  @media(max-height:850px) {
-  //    .video-contain{
-  //      margin-top:110px;
-  //    }
-  //  }
-  //}
-
   &_basket {
     width: 27px;
     height: 27px;
     margin-bottom: 8px;
     cursor: pointer;
-    background: url("../assets/basketActive.svg") no-repeat center;
+    background: url("../assets/basketCart.svg") no-repeat center;
     background-size: contain;
     &.active {
-      background: url("../assets/basketCart.svg") no-repeat center;
+      background: url("../assets/basketActive.svg") no-repeat center;
       background-size: contain;
     }
   }
@@ -108,6 +92,9 @@
     font-size: 12px;
     line-height: 120%;
     color: #1C9A3F;
+    &--grey {
+      color: #8592AA;
+    }
   }
 }
 
