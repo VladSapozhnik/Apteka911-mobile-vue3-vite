@@ -20,12 +20,14 @@
   const windowSize = ref(window.innerHeight);
   const rowDoubleHeight = 800;
 
+  onMounted(() => {
     window.addEventListener('resize', () => {
       let wHeight =  window.innerHeight;
 
       if (wHeight > rowDoubleHeight) return rowSlides.value = 2;
       else if (wHeight < rowDoubleHeight) return  rowSlides.value = 1;
     })
+  })
   const rowSlides = ref( windowSize.value > rowDoubleHeight ? 2 : 1);
 
 
