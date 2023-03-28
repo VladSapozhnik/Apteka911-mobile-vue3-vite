@@ -13,7 +13,7 @@ import {useStore} from "vuex";
   // const loadImg = (img) => new URL('../assets/'+img+'.png', import.meta.url).href;
 
   //IMG SRC BUILD `../static/images/${cart.img}.png`
-  const isBasketCart = (cart) =>  basketCart.value.filter(item => item.id === cart.id);
+  const isBasketCart = (cart) =>  basketCart.value.some(item => item.id === cart.id);
   const onSubmit = (cart) => {
     emit('addCartToBasket', cart);
   }
@@ -35,7 +35,7 @@ import {useStore} from "vuex";
         <div class="cart-price_prev" v-if="cart.prevPrice">{{ cart.prevPrice }} грн</div>
         <div class="cart-price_current" :class="{active: cart.prevPrice}">{{ cart.currentPrice }} грн</div>
       </div>
-      <div class="cart_basket" @click="onSubmit(cart)" v-if="cart.isStock" :class="{active: isBasketCart(cart).length}"></div>
+      <div class="cart_basket" @click="onSubmit(cart)" v-if="cart.isStock" :class="{active: isBasketCart(cart)}"></div>
     </div>
     <div class="cart_is-stock">
       <span v-if="cart.isStock">Є в наявності</span>
