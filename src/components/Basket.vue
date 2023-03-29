@@ -24,7 +24,9 @@ const phoneValidator = value => {
 }
 
 const isCyrillic = value => {
-  const regexp = /[\u0400-\u04ff]+/gi;
+  const regexp = /^[\u0400-\u04FF-\u2014]+$/;
+
+  // return regexp.replace(%\P{L}%u, value);
   return regexp.test(value);
 }
 

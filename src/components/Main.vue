@@ -10,7 +10,7 @@
   <Header/>
   <main class="main">
     <div class="container _f _f-column _h-100">
-      <div class="_f _j-between _i-center _mb-25">
+      <div class="_f _j-between _i-center _mb-15">
         <h2 class="h2 main_title">Найчастіше купують</h2>
         <div class="swiper-button _f">
           <div ref="prev" class="swiper-button-prev _f _i-center _j-center"></div>

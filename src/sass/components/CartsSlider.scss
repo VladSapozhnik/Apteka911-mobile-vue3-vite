@@ -38,6 +38,7 @@
   display: flex !important;
   flex-direction: column;
   height: auto !important;
+  max-height: 258px;
 
   &_img {
     width: 100%;
@@ -75,15 +76,27 @@
   }
 
   &_basket {
-    width: 27px;
-    height: 27px;
+    width: 34px;
+    height: 31px;
     margin-bottom: 8px;
     cursor: pointer;
-    background: url("../assets/basketCart.svg") no-repeat center;
-    background-size: contain;
+    background: url("../assets/basketCart.svg") no-repeat center left;
+    background-size: 27px;
+    position: relative;
     &.active {
-      background: url("../assets/basketActive.svg") no-repeat center;
-      background-size: contain;
+      background: url("../assets/basketActive.svg") no-repeat center left;
+      background-size: 27px;
+      &::after {
+        content: '';
+        width: 16px;
+        height: 16px;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: url("../assets/basketActiveCheck.svg") no-repeat center;
+        background-size: contain;
+      }
     }
   }
 

@@ -33,7 +33,9 @@ import {useStore} from "vuex";
         <div class="cart-price_prev" v-if="cart.prevPrice">{{ cart.prevPrice }} грн</div>
         <div class="cart-price_current" :class="{active: cart.prevPrice}">{{ cart.currentPrice }} грн</div>
       </div>
-      <div class="cart_basket" @click="onSubmit(cart)" v-if="cart.isStock" :class="{active: isBasketCart(cart)}"></div>
+      <div class="cart_basket" @click="onSubmit(cart)" v-if="cart.isStock" :class="{active: isBasketCart(cart)}">
+<!--        <img src="src/assets/basketCart.svg" alt="cart" />-->
+      </div>
     </div>
     <div class="cart_is-stock">
       <span v-if="cart.isStock">Є в наявності</span>
