@@ -20,7 +20,9 @@
   <header class="header">
     <div class="container _f _j-between _i-center">
       <Logo />
-      <input class="header_search _wid-100" type="text" placeholder="Пошук">
+      <div class="header-search _wid-100">
+        <input class="header-search_input" type="text" placeholder="Пошук">
+      </div>
       <router-link :to="{name: openBasket()}" class="header-basket">
         <span class="header-basket_count">{{countCart}}</span>
       </router-link>

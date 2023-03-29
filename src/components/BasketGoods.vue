@@ -18,7 +18,7 @@
       <ul class="goods-list" v-for="cart of basket" :key="cart.id">
         <li class="goods-item _f">
           <div class="goods-item_pic object-fit">
-            <img :src="`./src/assets/${cart.img}.png`" alt="basket goods" />
+            <img :src="`../static/images/${cart.img}.png`" alt="basket goods" />
           </div>
           <div>
             <h4 class="goods-item_title">{{cart.title}}</h4>
@@ -31,19 +31,3 @@
       </ul>
   </div>
 </template>
-
-<!--<script>-->
-<!--import {computed} from "vue";-->
-<!--import {useStore} from "vuex";-->
-
-<!--export default {-->
-<!--  name: "BasketGoods",-->
-<!--  setup() {-->
-<!--    const store = useStore();-->
-<!--    const basket = computed(() => store.getters.BASKET);-->
-<!--    return {-->
-<!--      basket-->
-<!--    }-->
-<!--  }-->
-<!--}-->
-<!--</script>-->

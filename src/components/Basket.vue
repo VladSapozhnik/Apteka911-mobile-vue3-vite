@@ -4,7 +4,7 @@ import {computed, reactive} from 'vue'
 import {useVuelidate} from '@vuelidate/core'
 import {required, email, helpers, maxLength} from '@vuelidate/validators'
 import {useStore} from "vuex";
-import {RouterLink} from "vue-router";
+import {RouterLink, useRouter} from "vue-router";
 import BasketGoods from "./BasketGoods.vue";
 
 const formData = reactive({
@@ -18,12 +18,12 @@ const store = useStore();
 const numberCarts = computed(() => store.getters.BASKET_CART_COUNT);
 const basketTotalPrice = computed(() => store.getters.BASKET_TOTAL_PRICE);
 
-const phoneValidator = (value) => {
+const phoneValidator = value => {
   const regexp = /^(\+38|38|8)?0[0-9]{9}$/;
   return regexp.test(value);
 }
 
-const isCyrillic = (value) => {
+const isCyrillic = value => {
   const regexp = /[\u0400-\u04ff]+/gi;
   return regexp.test(value);
 }
@@ -54,11 +54,15 @@ const rules = {
     }
   }
 }
+const router = useRouter();
 const v$ = useVuelidate(rules, formData)
 const handlerForm = async () => {
   const result = await v$.value.$validate();
   if (!result) {
     alert('Введіть обов\'язкові поля')
+  } else {
+    router.push('/');
+    alert("Ваше замовлення успішно прийнято")
   }
 }
 
